@@ -5,17 +5,24 @@ plugins {
 
 android {
     namespace 'com.example.mycloner'
-    compileSdk 35 // อัปเดตเป็น 35 เพื่อรองรับ Android 15
+    compileSdk 35
+    
     defaultConfig {
         applicationId "com.example.mycloner"
         minSdk 24
-        targetSdk 35 // อัปเดตเป็น 35 เพื่อให้รันบน Android 15 ได้สมบูรณ์
+        targetSdk 35
         versionCode 1
         versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.12.0' // อัปเดตไลบรารีให้ใหม่ขึ้น
+    implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
 }
+
